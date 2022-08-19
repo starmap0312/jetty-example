@@ -8,10 +8,10 @@ public class WebAppContextServer {
         // use WebAppContext:
         // WebAppContext represents a traditional webapp like a war file
         // WebappContext brings all the automatic deployment and wiring of things up only with the web.xml
-        WebAppContext context = new WebAppContext();
-        context.setContextPath("/");
-        context.setResourceBase("./src/main/webapp");
-        server.setHandler(context);
+        WebAppContext handler = new WebAppContext();
+        handler.setContextPath("/");
+        handler.setResourceBase("./src/main/webapp");
+        server.setHandler(handler);
         server.start();
         server.join();
         // http://localhost:8080/hello

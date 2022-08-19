@@ -9,10 +9,10 @@ public class ServletContextServer {
         // ServletContextHandler maps to a servlet
         // you can wire things up by adding servlets to the ServletContextHandler programmatically, or with web.xml definitions
         // add Servlet class & path mapping (can be defined  as well)
-        ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
-        context.setContextPath("/");
-        context.addServlet(HelloServlet.class, "/hello");
-        server.setHandler(context);
+        ServletContextHandler handler = new ServletContextHandler(ServletContextHandler.SESSIONS);
+        handler.setContextPath("/");
+        handler.addServlet(HelloServlet.class, "/hello");
+        server.setHandler(handler);
         server.start();
         server.join();
         // http://localhost:8080/hello
