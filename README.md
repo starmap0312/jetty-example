@@ -2,12 +2,12 @@
 
 ref: https://www.baeldung.com/deploy-to-jetty
 
-Run the following command to build the war file: ./target/jetty-example.war
+## Run the following command to build the war file: ./target/jetty-example.war
 ```
 mvn package
 ```
 
-# Deploying by Copying WAR
+## Deploying by Copying WAR
 To deploy a web application to Jetty server, we can copy the WAR file into the $JETTY_HOME/webapps directory.
 ex.
 ```
@@ -20,5 +20,5 @@ cd ../jetty-distribution-9.4.40.v20210413/
 java -jar start.jar
 ```
 
-Verify the service at Context Path: /jetty-example
+## Verify the service at Context Path: /jetty-example
 http://localhost:8080/jetty-example/
