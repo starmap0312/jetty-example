@@ -2,18 +2,20 @@
 
 ref: https://www.baeldung.com/deploy-to-jetty
 
-## Run the following command to build the war file: ./target/jetty-example.war
+### Build the war file
 ```
 mvn package
 ```
+This builds the war file at: ./target/jetty-example.war
 
-## Deploying by Copying WAR
+### Deploy by Copying WAR
 To deploy a web application to Jetty server, we can copy the WAR file into the $JETTY_HOME/webapps directory.
-ex.
+ex. JETTY_HOME../jetty-distribution-9.4.40.v20210413/, which has the jetty distribution start.jar file
 ```
 cp target/jetty-example.war ../jetty-distribution-9.4.40.v20210413/webapps/
 ```
 
+### Start the server
 After copying, we can start the server by navigating to $JETTY_HOME and running the command:
 ```
 cd ../jetty-distribution-9.4.40.v20210413/
